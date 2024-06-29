@@ -1,0 +1,19 @@
+.header {
+
+    display: flex;
+    align-items: flex-end;
+
+    h1 {
+        width: 500px;
+        height: 42px;
+        background-color: red;
+    }
+
+    li {
+        display: inline-block;
+        width: 200px;
+        background-color: red;
+        list-style:none;
+    }
+    
+}
