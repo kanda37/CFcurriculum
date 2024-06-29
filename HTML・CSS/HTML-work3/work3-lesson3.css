@@ -1,0 +1,14 @@
+h1 {
+    background-color: blue;
+    width: 130px;
+    margin: auto;
+}
+
+.mainBox {
+    background-color: yellow;
+    height: 300px;
+    width: 600px;
+    padding-top: 60px;
+    padding-left: 50px;
+}
+
