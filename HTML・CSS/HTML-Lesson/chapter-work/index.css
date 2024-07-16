@@ -1699,8 +1699,6 @@ h1, h2, h3, h4, h5, h6 {
 .m-shareButtons-item {
   display: inline-block;
   vertical-align: top;
-  *display: inline;
-  *zoom: 1;
   font-size: 1rem;
   letter-spacing: normal;
   word-spacing: normal;
@@ -1945,44 +1943,6 @@ h1, h2, h3, h4, h5, h6 {
 .m-productPoint-button {
   text-align: center;
   margin-top: 110px;
-}
-
-@media only screen and (max-width: 700px) {
-  .m-productPoint-title {
-    font-size: 32px;
-  }
-
-  .m-productPoint-list {
-    margin-top: 0;
-  }
-
-  .m-productPoint-item {
-    width: 50%;
-    margin-top: 30px;
-  }
-
-  .m-productPoint-item-title {
-    margin-top: 10px;
-  }
-
-  .m-productPoint-button {
-    margin-top: 60px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .m-productPoint-item {
-    width: 100%;
-  }
-
-  .m-productPoint-item-image img {
-    max-width: 300px;
-    width: auto;
-  }
-}
-.m-productPhoto-image img {
-  width: 100%;
-  height: auto;
-  vertical-align: top;
 }
 
 .m-backToTop {
@@ -2290,24 +2250,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .m-entryPager-next {
   float: right;
-}
-
-@media only screen and (max-width: 700px) {
-  .m-entryPager {
-    margin-top: 50px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .m-entryPager-prev {
-    float: none;
-    text-align: center;
-  }
-
-  .m-entryPager-next {
-    float: none;
-    margin-top: 10px;
-    text-align: center;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
