@@ -1674,7 +1674,6 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  background: url("../img/backTop@2x.png") no-repeat;
   background-size: 50px 50px;
   width: 50px;
   height: 50px;
@@ -1731,8 +1730,6 @@ h1, h2, h3, h4, h5, h6 {
   .m-shareButtons-item--line {
     display: inline-block;
     vertical-align: top;
-    *display: inline;
-    *zoom: 1;
     font-size: 1rem;
     letter-spacing: normal;
     word-spacing: normal;
@@ -1746,11 +1743,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.1em;
 }
 
-@media only screen and (max-width: 580px) {
-  .m-copyRight {
-    text-align: center;
-  }
-}
 .m-productDetail-item {
   margin-top: 120px;
 }
@@ -1766,50 +1758,11 @@ h1, h2, h3, h4, h5, h6 {
   display: table;
 }
 
-.m-productDetail-item-title {
-  display: table-cell;
-  vertical-align: middle;
-  margin: 0;
-  text-align: center;
-}
-.m-productDetail-item-title span {
-  display: block;
-  font-size: 40px;
-  color: #fff;
-  background: url("../img/productDetail-title-underLine@2x.png") no-repeat;
-  background-size: 68px 8px;
-  background-position: 50% bottom;
-  padding-bottom: 25px;
-  padding-left: 7%;
-  padding-right: 7%;
-}
-
 .m-productDetail-item-button {
   margin-top: 110px;
   text-align: center;
 }
 
-@media only screen and (max-width: 700px) {
-  .m-productDetail-item {
-    margin-top: 80px;
-  }
-
-  .m-productDetail-item-image {
-    height: 300px;
-  }
-  .m-productDetail-item-image span {
-    font-size: 32px;
-  }
-
-  .m-productDetail-item-button {
-    margin-top: 60px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .m-productDetail-item-image {
-    height: 250px;
-  }
-}
 .m-productDescription-item {
   margin-top: 120px;
   box-sizing: content-box;
@@ -1913,8 +1866,6 @@ h1, h2, h3, h4, h5, h6 {
 .m-productPoint-item {
   display: inline-block;
   vertical-align: top;
-  *display: inline;
-  *zoom: 1;
   font-size: 1rem;
   letter-spacing: normal;
   word-spacing: normal;
@@ -2207,8 +2158,6 @@ h1, h2, h3, h4, h5, h6 {
 .m-entryShare-item {
   display: inline-block;
   vertical-align: top;
-  *display: inline;
-  *zoom: 1;
   font-size: 1rem;
   letter-spacing: normal;
   word-spacing: normal;
