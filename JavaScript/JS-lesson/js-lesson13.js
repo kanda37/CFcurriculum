@@ -2,7 +2,7 @@
 
 let count = 0;
 
-while (count<=30) {
+while (count<=37) {
     console.log(count);
     count++;
 }
