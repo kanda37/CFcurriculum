@@ -27,6 +27,47 @@
 
         //下記からコードを記述してください。
         //ヒント（）の中に（）を記述すると数学のように（）内を先に処理するというようなことができるよ！
+
+        // 条件1
+        let age = 23;
+
+        if (age >= 18 && age < 20) {
+
+            console.log("未成年ではないけど、お酒は飲めません");
+        } else if (age >= 20) {
+
+            console.log("成人です。")
+        } else {
+
+            console.log("未成年です。");
+        }
+
+        // 条件2
+
+        let temp = -200;
+
+        let season = '冬';
+
+        if (temp < 1 && season == '冬') {
+
+            console.log("今日は非常に寒いです！");
+        } 
+        
+        if (temp >= 15 && season == '冬') {
+
+            console.log("冬にしては暖かいです！");
+        } 
+        
+        if (temp >= 30 || season == '夏') {
+
+            console.log("暑すぎて死ぬ！");
+        } 
+        
+        if ((temp >=50 && season == '夏') || (temp < -100 && season == '冬')) {
+
+            console.log("死にました！")
+        }
+
     </script>
 </body>
 </html>
