@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS work8</title>
 </head>
+
 <body>
     <h2>14行目からのコメントの指示に従って作業してください。</h2>
     <p>プログラムの実行結果は開発者ツールのコンソールに表示されています。</p>
@@ -31,7 +33,51 @@
 
         //この下から課題を記述してね！
 
+        // 1の条件
+        let age = 19;
+
+        if (age < 18) {
+
+            console.log("未成年");
+
+        } else if (18 <= age && age < 20) {
+
+            console.log("若者");
+
+        } else if (age >= 20) {
+
+            console.log("成人")
+        }
+
+        // ２の条件
+        let number = 33;
+
+        if (number < 50) {
+
+            console.log("50未満");
+        } else if (50 <= number && number < 60) {
+
+            console.log("50以上60未満");
+        } else if (number >= 60) {
+
+            console.log("60以上");
+        }
+
+        // 3の条件
+        let fruit = 'apple';
+
+        if (fruit == 'apple') {
+            console.log("Apple");
+        } else if (fruit == 'banana') {
+            console.log("Banana");
+        } else if (fruit == 'cherry') {
+            console.log("Cherry");
+        } else {
+            console.log("その他");
+        }
+
 
     </script>
 </body>
+
 </html>
