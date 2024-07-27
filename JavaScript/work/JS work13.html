@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS work13</title>
 </head>
+
 <body>
     <h2>14行目からのコメントの指示に従って作業してください。</h2>
     <p>プログラムの実行結果は開発者ツールのコンソールに表示されています。</p>
@@ -19,6 +21,38 @@
          ③20〜２００までの数字で2の倍数かつ、５の倍数である数字だけをコンソール表示する関数「number()」を定義して、それを呼び出して下さい。
         */
 
+        // ①
+        function sayHello() {
+            console.log("こんにちは");
+        }
+
+        sayHello();
+
+        // ②
+        function hundred() {
+
+            for (let i = 1; i <= 100; i++) {
+                console.log(i);
+            }
+
+        }
+
+        hundred();
+
+        // ③
+        function number() {
+
+            for (let num = 20; num <= 200; num++) {
+
+                if (((num % 2) == 0) && ((num % 5) == 0)) {
+                    console.log(num);
+                }
+            }
+        }
+
+        number();
+
     </script>
 </body>
+
 </html>
