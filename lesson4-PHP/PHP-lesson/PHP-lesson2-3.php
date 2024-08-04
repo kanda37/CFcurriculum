@@ -48,11 +48,74 @@
       $player = [];
       // 相手のカード
       $opponent = [];
+
+      // カードを2枚配る
+      $player[] = $cards[rand(0, 12)];
+      $player[] = $cards[rand(0, 12)];
+
+      // カードを2枚配る
+      $opponent[] = $cards[rand(0, 12)];
+      $opponent[] = $cards[rand(0, 12)];        
+      
+      echo 'プレイヤー1枚目：'.$player[0];
+      echo "<br>";
+      echo 'プレイヤー２枚目：'.$player[1];
+      echo "<br>";
+
+      echo '相手1枚目：'.$opponent[0];
+      echo "<br>";
+      echo '相手２枚目：'.$opponent[1];
+      echo "<br>";
+
+      // 得点計算
+      $player_num = num_change($player[0]) + num_change($player[1]);
+
+      $opponent_num = num_change($opponent[0]) + num_change($opponent[1]);
+
+      echo '自分：'.$player_num.'点　';
+      echo '対戦相手：'.$opponent_num.'点 　';
+      echo '勝敗：';
+
+      if ($player_num > $opponent_num) {
+
+        if($player_num == 21) {
+            echo 'ブラックジャック！';
+        }
+
+        echo 'あなたの勝ちです。';
+
+      } elseif ($player_num == $opponent_num) {
+
+        echo '引き分けです。';
+
+      } else {
+
+        echo 'あなたの負けです。';
+      }
+
     }
-    
 
     //この下に記述してください
 
+    blackJack();
+
+    // 文字を数値に変換
+    function num_change($card) {
+
+        if ($card <= 10) {
+            return $card;
+        }
+
+        // カードがJ、Q,Kの場合
+        if ((strcmp($card, 'J') == 0) || (strcmp($card, 'Q') == 0) || (strcmp($card, 'K') == 0) ) {
+            return 10;
+        }
+
+        // カードがAの場合
+        if (strcmp($card, 'A') == 0) {
+            return 11;
+        }
+    }
     
     ?>
 <div>
