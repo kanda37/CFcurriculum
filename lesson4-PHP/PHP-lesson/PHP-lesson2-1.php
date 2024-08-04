@@ -60,6 +60,42 @@
 
     //この下に記述してください
 
+    for($year = 1900; $year <= date('Y'); $year++) {
+
+        is_leap($year);
+    }
+
+
+    // 判定用関数
+    function is_leap($year) {
+
+        if ($year % 4 == 0) {
+
+            if ($year % 100 == 0) {
+
+                if ($year % 400 == 0) {
+
+                    echo $year . '年はうるう年です。';
+                    echo "<br>";
+                } else {
+                    echo $year . '年はうるう年ではありません。';
+                    echo "<br>";
+                }
+
+
+            } else {
+                echo $year . '年はうるう年です。';
+                echo "<br>";
+            }
+
+        } else {
+            echo $year . '年はうるう年ではありません。';
+            echo "<br>";
+        }
+
+
+    }
+
     
 ?>
 <div>
