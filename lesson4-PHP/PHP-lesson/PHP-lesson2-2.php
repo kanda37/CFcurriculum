@@ -36,6 +36,89 @@
 
     //この下に記述してください
 
+    $purchase = 20000;   // 支払い金額
+    $product = 7357; // 購入金額
+
+    function calc($purchase, $product){
+
+        $money = [5000,1000,500,100,50,10,5,1];
+        // おつり
+        $change = $purchase-$product;
+        $result = [];
+        if ($change < 0) {
+          return $change = $change * -1;
+        }
+        foreach ($money as $value) {
+        
+          // お釣りが0円以下になる場合
+          if($change <= 0){
+            $result[$value] = 0;
+          }else{
+
+            $page = floor($change/$value);
+            $result[$value] = $page; 
+            $change -= ($page*$value);
+          }
+        }
+        return $result;
+      }
+
+
+    $change_arr = calc($purchase, $product);
+
+    echo '商品の値段：'.$product;
+    echo "<br>";
+    echo 'おつり内訳';
+    echo "<br>";
+
+    // 5000円札
+    if ($change_arr[5000] != 0) {
+        echo '五千円札　'.$change_arr[5000].'枚';
+        echo "<br>";
+    }
+
+    // 1000円札
+    if ($change_arr[1000] != 0) {
+        echo '千円札　'.$change_arr[1000].'枚';
+        echo "<br>";
+    }
+
+    // 500円
+    if ($change_arr[500] != 0) {
+        echo '五百円玉　'.$change_arr[500].'枚';
+        echo "<br>";
+    }
+
+    // 100円
+    if ($change_arr[100] != 0) {
+
+        echo '百円玉　'.$change_arr[100].'枚';
+        echo "<br>";
+    }
+
+    // 50円
+    if ($change_arr[50] != 0) {
+
+        echo '五十円玉　'.$change_arr[100].'枚';
+        echo "<br>";
+    }
+
+    // 10円
+    if ($change_arr[10] != 0) {
+        echo '十円玉　'.$change_arr[10].'枚';
+        echo "<br>";
+    }
+
+    // 1円
+    if ($change_arr[5] != 0) {
+        echo '五円玉　'.$change_arr[5].'枚';
+        echo "<br>";
+    }
+
+    if ($change_arr[1] != 0) {
+        echo '一円玉　'.$change_arr[1].'枚';
+        echo "<br>";
+    }
     
 ?>
 <div>
