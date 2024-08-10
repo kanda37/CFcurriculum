@@ -15,3 +15,5 @@
   |    ブレイブ・ニュー・ワールド　　　 |
   +----------------------------------+
 */
+
+SELECT DISTINCT title FROM Books WHERE ID = (SELECT BookID FROM Reviews WHERE Score <= 3) ;
