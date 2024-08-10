@@ -6,4 +6,4 @@
 */
 
 --Booksテーブルからauthorカラムのデータを取得するSQLを以下に書いてください。
-SELECT author FROM Books;
+SELECT author FROM Books ;
