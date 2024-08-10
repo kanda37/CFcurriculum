@@ -15,3 +15,5 @@
   | ファウンデーション |
   +-------------------+
 */
+
+SELECT title FROM Books WHERE Genre = 'SF' ;
