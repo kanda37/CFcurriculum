@@ -11,3 +11,15 @@
   | genre   | average_score |
   +---------+---------------+
 */
+
+SELECT
+	genre,
+	AVG(Score) as average_score
+FROM
+	Books
+INNER JOIN Reviews ON
+	Books.ID = Reviews.BookID
+WHERE 
+    3 >= (SELECT AVG(score) FROM Reviews)
+GROUP BY
+	genre ;
