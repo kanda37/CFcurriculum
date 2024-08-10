@@ -1,7 +1,16 @@
 <?php
 
-?>
+session_start();
 
+if(isset($_SESSION['error_message'])) {
+    $error_message=$_SESSION['error_message'];
+}
+
+if(isset($_SESSION['input_data'])) {
+    $data=$_SESSION['input_data'];
+}
+
+?>
 
 
 <!DOCTYPE html>
@@ -47,18 +56,25 @@
             <form action="./PHP-lesson3-2-check.php" method="post" >
                 <div class="form-item">名前</div>
                 <!-- この下にinputタグでフォーム作成 -->
-                
+                <input type="text" name="name" value="<?php echo isset ($_POST['name']) ? htmlspecialchars($_POST['name'], ENT_QUOTES) : ""; ?>" />
+                <span style = "color:red;" ><?php echo isset($error_message['name']) ? $error_message['name'] : ""; ?></span>
+
                 <div class="form-item">メールアドレス</div>
                 <!-- この下にinputタグでフォーム作成 -->
+                <input type="text" name="mail" value="<?php echo isset ($_POST['mail']) ? htmlspecialchars($_POST['mail'], ENT_QUOTES) : ""; ?>" />
+                <span style = "color:red;"><?php echo isset($error_message['mail']) ? $error_message['mail'] : ""; ?></span>
                 
 
                 <div class="form-item">電話番号</div>
                 <!-- この下にinputタグでフォーム作成 -->
+                <input type="text" name="phone" value="<?php echo isset ($_POST['phone']) ? htmlspecialchars($_POST['phone'], ENT_QUOTES) : ""; ?>" />
+                <span style = "color:red;"><?php echo isset($error_message['phone']) ? $error_message['phone'] : ""; ?></span>
                 
 
                 <div class="form-item">内容</div>
                 <!-- この下にtextareaタグでtaxtフォーム作成 -->
-              
+                <textarea name="body"><?php echo isset ($_POST['body']) ? htmlspecialchars($_POST['body'], ENT_QUOTES) : ""; ?></textarea>
+                <span style = "color:red;"><?php echo isset($error_message['body']) ? $error_message['body'] : ""; ?></span>
 
                 <div class="check">
                     <p class="btn">
