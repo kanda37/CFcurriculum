@@ -10,3 +10,7 @@
     1. Booksテーブルからtitleカラムが"ワンピース"のレコードを取得するSQL
     2. BooksテーブルからPublicationYearカラムが2023以下のレコードを取得するSQL
 */
+
+SELECT * FROM Books WHERE title = 'ワンピース' ;
+
+SELECT * FROM Books WHERE PublicationYear <= 2023 ;
