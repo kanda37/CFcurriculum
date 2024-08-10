@@ -25,8 +25,8 @@
 
 SELECT
     b.ID as book_id,
-	b.Title,
-	b.author,
+	  b.Title,
+	  b.author,
     b.PublicationYear as publication_year,
     b.isbn,
     b.genre,
