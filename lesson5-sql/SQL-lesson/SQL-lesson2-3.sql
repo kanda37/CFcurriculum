@@ -17,3 +17,5 @@
   |    ファンタジー 　　 |     5     |
   +--------+------------------------+
 */
+
+SELECT Genre, MAX(Score) as max_score FROM Books INNER JOIN Reviews ON Books.ID = Reviews.BookID GROUP BY Genre ;
