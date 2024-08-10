@@ -22,3 +22,28 @@
 +------------+--------------------------+----------------------+------------------+-------------------+--------------+-----------------------+
 
 */
+
+SELECT
+    b.ID as book_id,
+	b.Title,
+	b.author,
+    b.PublicationYear as publication_year,
+    b.isbn,
+    b.genre,
+    sub.average_score
+FROM
+	Books b
+INNER JOIN 
+	(
+	SELECT
+		Genre,
+		AVG(Score) as average_score
+	FROM 
+		Books bo1
+	INNER JOIN Reviews ON
+		bo1.ID = Reviews.BookID
+	GROUP BY
+		bo1.Genre
+	) as sub
+	ON
+	b.genre = sub.Genre
