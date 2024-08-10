@@ -18,3 +18,10 @@
 +--------------------+
 
 */
+
+SELECT
+	Author as name
+FROM
+	Books
+WHERE
+	Genre != 'SF' ;

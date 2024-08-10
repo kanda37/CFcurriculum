@@ -46,4 +46,4 @@ INNER JOIN
 		bo1.Genre
 	) as sub
 	ON
-	b.genre = sub.Genre
+	b.genre = sub.Genre ;
