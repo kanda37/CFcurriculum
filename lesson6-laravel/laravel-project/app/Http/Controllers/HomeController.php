@@ -37,7 +37,9 @@ class HomeController extends Controller
     // 新規作成フォーム
     public function create()
     {
-        return view('contacts.create');
+        $user = auth()->user();
+        $createContacts = Contact::where('user_id', $user->id)->get();
+        return view('contacts.create' , compact('createContacts'));
     }
 
     // 新規作成処理
@@ -46,6 +48,11 @@ class HomeController extends Controller
         $request->merge(['user_id' => Auth::user()->id]); //ユーザーIDを追加
 
         // バリデーションなどの処理を追加
+        $validated = $request->validate([
+            'phone_number' => 'unique:contacts,phone_number|regex:/^0[789]0\d{8}$/',
+            'email' => 'unique:contacts,email',
+        ]);
+
         Contact::create($request->all());
         
         return redirect()->route('home');
