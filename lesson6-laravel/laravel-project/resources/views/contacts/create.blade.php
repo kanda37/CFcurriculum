@@ -32,12 +32,9 @@
             </tr>
         </thead>
         <tbody>
-            @error('phone_number')
-                <li>{{$message}}</li>
-            @enderror
-            @error('email')
-                <li>{{$message}}</li>
-            @enderror
+            @foreach ($errors->all() as $error)
+                <li>{{$error}}</li>
+            @endforeach
             @foreach ($createContacts as $contact)
                 <tr>
                     <td>{{ $contact->name }}</td>

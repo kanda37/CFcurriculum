@@ -51,6 +51,11 @@ class HomeController extends Controller
         $validated = $request->validate([
             'phone_number' => 'unique:contacts,phone_number|regex:/^0[789]0\d{8}$/',
             'email' => 'unique:contacts,email',
+        ],
+        [
+            'phone_number.unique'    => '電話番号は既に登録しています',
+            'phone_number.regex'    => '数値を入力してください',
+            'email.unique'  => 'メールアドレスは既に登録しています',
         ]);
 
         Contact::create($request->all());
